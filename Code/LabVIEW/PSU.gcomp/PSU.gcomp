@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="475B68A1C6D82E7235A7DDBB1A063B397CE5B3F15FCE62CFCF41BDAB736376D76C1C3B0413DEC6CD808103E73DF19F255146422ECF3703692F41D9D4D20022F3" Timestamp="1D701631F4A8BA0" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.1.0.50414" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/EnvoyManagement" OldestCompatibleVersion="5.0.0.0" Version="5.0.0.49152" />
+		<ApplicationVersionInfo Build="8.1.0.50414" Name="LabVIEW NXG" Version="5.0.0" />
+	</SourceModelFeatureSet>
+	<ComponentDefinition DefaultConfigurationName="Configuration1" Id="efc21fffe6164bd2828b431f77f02051" RootNamespaceId="69a7c77cafaa4bd79e70bcd08ddc32ff" xmlns="http://www.ni.com/GComponent.xsd">
+		<Icon Id="ca402327137149ddbb8c4e944eeaa8fa" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="bb4510ca56424d2fa25b986f7c73d3ea" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="a73c57771e664e8f9919f12737dd6657" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<CompilerSymbolTable Id="a9a520ac25d1418fa16dd502b37e232e" xmlns="http://www.ni.com/PlatformFramework" />
+		<ComponentConfiguration Id="fc5908d3d89041c98ba67c44d02b5dd2" Name="Configuration1">
+			<CompilerSymbolTable Id="cb270120fccf4d3a9d6f49c3d114d7ae" xmlns="http://www.ni.com/PlatformFramework" />
+			<GLibraryProperties Id="8207dd14a0754133833445d3e34ca0fa" />
+			<ComponentItemProperties AssociatedEnvoyId="16be3de1e3da4f89ac2fe678b23b20c9" Exported="True" Id="5d443dd02164187b210ab8f915c9fd8" />
+			<ComponentItemProperties AssociatedEnvoyId="5627577bbd8b449583c3c7a0e80d52ba" Exported="True" Id="b1caf1551bc94656817abad76732106c" />
+			<ComponentItemProperties AssociatedEnvoyId="6ba8958f016144068431ea710a6f1322" Exported="True" Id="f79ca48e8d8e4bcf83f8f2a47dd7db4b" />
+			<ComponentItemProperties AssociatedEnvoyId="d58697bdbac044e5b528bab869db7f9b" Exported="True" Id="1996f099b42949ecb9fc0482af37e727" />
+			<ComponentItemProperties AssociatedEnvoyId="a2d1d0a2913475f8ecc81047bbf4780" Exported="True" Id="1c3ce57b995345dd8d27ed5d92340585" />
+		</ComponentConfiguration>
+	</ComponentDefinition>
+	<EnvoyManagerFile Id="26d2dee17920481392d521148e2a9a0d" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="a421e3b9bd1454bbd18c7f685788a82" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="ea533e6ee5f7439ab5833da53bc00ae7" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global namespace">
+			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
+			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="69a7c77cafaa4bd79e70bcd08ddc32ff" Name="PSU">
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="16be3de1e3da4f89ac2fe678b23b20c9" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="PSU_Initialization.gvi" StoragePath="PSU_Initialization.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="5627577bbd8b449583c3c7a0e80d52ba" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="PSU_Output.gvi" StoragePath="PSU_Output.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="6ba8958f016144068431ea710a6f1322" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="PSU_Measure.gvi" StoragePath="PSU_Measure.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="d58697bdbac044e5b528bab869db7f9b" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="PSU_Setting.gvi" StoragePath="PSU_Setting.gvi" />
+				<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="a2d1d0a2913475f8ecc81047bbf4780" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="PSU_Loop.gvi" StoragePath="PSU_Loop.gvi" />
+			</NameScopingEnvoy>
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="64005e2452544b9eadcde1afa3984df6" Name="PSU.gcomp" NameTracksFileName="True">
+			<ContentReference ContentIdentifier="fc5908d3d89041c98ba67c44d02b5dd2" Id="e0cd1e7ba94c44b0aaa4b4600f5ef6b4" Name="Configuration1" OverridingModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentConfiguration" />
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+</SourceFile>
