@@ -19,11 +19,11 @@ outputFast          = 'Data/Rotation_Acceleration.png'
 outputTrackingTime  = 'Data/Tracking_Time.png'
 outputTrackingOrder = 'Data/Tracking_Order.png'
 
-sampleRate = 200_000
-ratio = 7
-duration = 25
+samplingRate = 200_000
+ratio        = 7
+duration     = 25
 
-divisions = 2048
+divisions       = 2048
 expansionFactor = 8
 
 
@@ -97,7 +97,7 @@ print('Preprocessing...')
 data = numpy.load(inputSlow)
 
 v = data[:, 1]
-t = numpy.arange(v.size) / sampleRate
+t = numpy.arange(v.size) / samplingRate
 
 zeros, filtered = findRotation(v)
 
@@ -166,7 +166,7 @@ data = numpy.load(inputFast)
 window = [0.45, 0.55]
 
 v = data[:, 1]
-t = numpy.arange(v.size) / sampleRate
+t = numpy.arange(v.size) / samplingRate
 
 zeros, filtered = findRotation(v)
 

@@ -15,9 +15,9 @@ outputSpectrogramOrder     = 'Data/Sweep_Spectrogram_Order.png'
 outputSpectrumFrequency    = 'Data/Sweep_Spectrum_Frequency.png'
 outputSpectrumOrder        = 'Data/Sweep_Spectrum_Order.png'
 
-sampleRate  = 200_000.
-sensitivity = 0.02          # V / (m / s^2)
-ratio       = 7
+samplingRate = 200_000.
+sensitivity  = 0.02          # V / (m / s^2)
+ratio        = 7
 
 divisions       = 2048
 expansionFactor = 8
@@ -32,7 +32,7 @@ data = numpy.load(input)
 phase = data[:, 1]
 
 tVibration = data[:, 0]
-t          = numpy.arange(tVibration.size) / sampleRate
+t          = numpy.arange(tVibration.size) / samplingRate
 
 rotation   = Lib.findRotations(phase)
 
@@ -66,7 +66,7 @@ pyplot.clf()
 
 print('Generating frequency spectrum...')
 
-frequency, psd = signal.welch(tVibration, fs = sampleRate, nperseg = 1024 * 256, noverlap = 1024 * 2, detrend = 'constant')
+frequency, psd = signal.welch(tVibration, fs = samplingRate, nperseg = 1024 * 256, noverlap = 1024 * 2, detrend = 'constant')
 
 slice = frequency <= 1000 + frequency[1]
 
@@ -110,7 +110,7 @@ pyplot.clf()
 
 print('Generating frequency spectrogram...', end = '')
 
-frequency, time, spectrum = signal.spectrogram(tVibration, sampleRate, nperseg = 1024 * 64, detrend = 'constant')
+frequency, time, spectrum = signal.spectrogram(tVibration, samplingRate, nperseg = 1024 * 64, detrend = 'constant')
 
 slice = frequency <= 1000 + frequency[1]
 frequency = frequency[slice]

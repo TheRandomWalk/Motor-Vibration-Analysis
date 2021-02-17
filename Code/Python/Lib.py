@@ -69,7 +69,7 @@ def findRotations(f, threshold = 0.25, dilation = 0.01 / 7., samplingRate = 200_
     return rotation / samplingRate
 
 
-def orderTracking(rotation, acceleration, sampleRate = 200_000, divisions = 2048, expansionFactor = 1.):
+def orderTracking(rotation, acceleration, samplingRate = 200_000, divisions = 2048, expansionFactor = 1.):
     if rotation.size <= 2:
         return numpy.array([])
     else:
@@ -78,7 +78,7 @@ def orderTracking(rotation, acceleration, sampleRate = 200_000, divisions = 2048
         else:
             expanded = acceleration
 
-        expandedSampleRate = sampleRate * expansionFactor
+        expandedSamplingRate = samplingRate * expansionFactor
         
         fractionalRotation = numpy.arange((rotation.size - 1) * divisions) / divisions
 
@@ -88,7 +88,7 @@ def orderTracking(rotation, acceleration, sampleRate = 200_000, divisions = 2048
 
         t = interpolate.interp1d(x, y, kind = 'quadratic')(fractionalRotation)
 
-        x = numpy.arange(0, expanded.size) / expandedSampleRate
+        x = numpy.arange(0, expanded.size) / expandedSamplingRate
         y = expanded
        
         t = numpy.clip(t, x[0], x[-1])
