@@ -22,6 +22,9 @@ ratio        = 7
 divisions       = 2048
 expansionFactor = 8
 
+vminPercentile = 0.1
+vmaxPercentile = 99.9
+
 
 # Preprocessing
 
@@ -123,7 +126,10 @@ spectrum /= spectrum.max()
 
 print(' {:,d} x {:,d}'.format(spectrum.shape[1], spectrum.shape[0]))
 
-pyplot.pcolormesh(time, frequency, spectrum, shading = 'gouraud', cmap = 'inferno')
+vmin = numpy.percentile(spectrum, vminPercentile)
+vmax = numpy.percentile(spectrum, vmaxPercentile)
+
+pyplot.pcolormesh(time, frequency, spectrum, shading = 'nearest', vmin = vmin, vmax = vmax, cmap = 'inferno')
 pyplot.ylim(0, 1_000)
 
 pyplot.xlabel('Time (s)')
@@ -151,7 +157,10 @@ spectrum /= spectrum.max()
 
 print(' {:,d} x {:,d}'.format(spectrum.shape[1], spectrum.shape[0]))
 
-pyplot.pcolormesh(time, order, spectrum, shading = 'gouraud', cmap = 'inferno')
+vmin = numpy.percentile(spectrum, vminPercentile)
+vmax = numpy.percentile(spectrum, vmaxPercentile)
+
+pyplot.pcolormesh(time, order, spectrum, shading = 'nearest', vmin = vmin, vmax = vmax, cmap = 'inferno')
 pyplot.ylim(0, 5)
 
 pyplot.xlabel('Rotation')
